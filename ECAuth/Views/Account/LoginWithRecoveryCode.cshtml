@@ -1,0 +1,30 @@
+﻿@using ECAuth.Models.AccountViewModels
+@model ECAuth.Models.AccountViewModels.LoginWithRecoveryCodeViewModel
+@{
+    ViewData["Title"] = "Verificación de código de recuperación";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<p>
+    Ha solicitado acceder con un código de recuperación. 
+    You have requested to login with a recovery code. Este login no será recordado hasta que proporcione 
+    un código de autenticación de aplicación durante el acceso o deshabilite el doble factor de autenticación de nuevo.
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RecoveryCode"></label>
+                <input asp-for="RecoveryCode" class="form-control" autocomplete="off" />
+                <span asp-validation-for="RecoveryCode" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-default">Acceder</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

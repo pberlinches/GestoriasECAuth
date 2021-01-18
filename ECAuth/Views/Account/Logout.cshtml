@@ -1,0 +1,21 @@
+﻿@model ECAuth.Quickstart.Account.LogoutViewModel
+
+<div class="logout-page">
+    <div class="page-header">
+        <h1>Cerrar sesión</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <p>¿Desea cerrar la sesión?</p>
+            <form asp-action="Logout">
+                <input type="hidden" name="logoutId" value="@Model.LogoutId"  />
+                <fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Si</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

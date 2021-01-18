@@ -1,0 +1,39 @@
+﻿@using ECAuth.Quickstart.Account
+@model ECAuth.Quickstart.Account.LoggedOutViewModel
+@using Microsoft.Extensions.Options;
+
+@{ 
+    // set this so the layout rendering sees an anonymous user
+    ViewData["signed-out"] = true;
+}
+
+@inject IOptions<MyConfig> OptionsApplicationConfiguration
+
+<div class="page-header logged-out">
+    <div class="titulo1">        
+        Se ha cerrado la sesión.
+        <br />
+        <a href="@OptionsApplicationConfiguration.Value.URLHomeExternalApp">Volver a Iniciar Sesión</a>    
+    </div>
+
+    @if (Model.PostLogoutRedirectUri != null)
+    {
+        <div>
+            Haga clic <a class="PostLogoutRedirectUri" href="@Model.PostLogoutRedirectUri">aquí</a> para regresar a la aplicación 
+            <span>@Model.ClientName</span>.
+        </div>
+    }
+
+    @if (Model.SignOutIframeUrl != null)
+    {
+        <iframe width="0" height="0" class="signout" src="@Model.SignOutIframeUrl"></iframe>
+    }
+</div>
+
+@section scripts
+{
+    @if (Model.AutomaticRedirectAfterSignOut)
+    {
+        <script src="~/js/signout-redirect.js"></script>
+    }
+}

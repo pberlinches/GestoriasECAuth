@@ -1,0 +1,31 @@
+@using ECAuth.Domain
+@using ECAuth.Quickstart.Account
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    bool signedOut = ViewData["signed-out"] != null && (bool)ViewData["signed-out"];
+}
+@if (SignInManager.IsSignedIn(User) && !signedOut)
+{
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right column">
+            Hola @UserManager.GetUserName(User)
+            <br />
+            <a href="javascript:document.getElementById('logoutForm').submit()">Desconectar</a>
+            <br />
+            <a asp-area="" asp-controller="Manage" asp-action="ChangePassword">Cambiar Contraseña</a>
+        </ul>
+    </form>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        @if (AccountOptions.AllowAutoRegistration)
+        {
+            <li><a asp-area="" asp-controller="Account" asp-action="Register">Registrarse</a></li>
+        }
+        @*<li><a asp-area="" asp-controller="Account" asp-action="Login">Iniciar sesi&oacute;n</a></li>*@
+    </ul>
+}

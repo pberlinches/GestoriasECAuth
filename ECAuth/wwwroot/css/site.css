@@ -1,0 +1,124 @@
+﻿/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/poppins-v5-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Poppins Regular'), local('Poppins-Regular'), url('/fonts/poppins-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/poppins-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/fonts/poppins-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/poppins-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/poppins-v5-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+
+.custom-navbar-fixed-bottom {
+    background-color: #101010 !important;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.custom-navbar-header {
+    /*background-color: #101010 !important;*/
+    color: white;
+    padding: 20px 20px !important;
+    background-image: url("http://localhost:55816/img/cabecero_fondo.jpg") !important;
+}
+
+.menu {
+    font-size: 18px;
+}
+
+.menu a {
+    color: white;
+}
+
+.titulo1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.titulo2 {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.panel-heading.row {
+    margin: 0;
+    padding-left: -15px;
+    padding-right: 0px;
+    color: #ffffff;
+    background-color: #286A78;
+    border-color: #286A78;
+    border: solid;
+}
+
+body {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    font-size: 13px;
+    font-family: 'Poppins',Arial,sans-serif !important;
+}
+
+.column a {
+    color: white;
+}
+
+.custom-breadcrumb {
+    background-color: transparent !important;
+}
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+.msg-ok {
+    color: #84C403;
+    font-family: core_sans;
+    font-size: 15px;
+}
+
+
+.ic-ok {
+    background-color: #257719;
+    color: white;
+}
+
+.ic-ok:hover,
+.ic-ok:focus,
+.ic-ok:active {
+    background-color: #257719;
+    color: white;
+    border-color: #184F11;
+}
+
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

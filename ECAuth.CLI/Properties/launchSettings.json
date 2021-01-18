@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ECAuth.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": " delete-add-claims -u AMMARTINEZ -d \"GestorEmpleado,GestorModificacion,GestorConsulta\" -a \"GestorEmpleado,GestorModificacion,GestorConsulta\" -p AMMARTINEZ2"
+    }
+  }
+}

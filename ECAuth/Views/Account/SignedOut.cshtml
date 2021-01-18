@@ -1,0 +1,14 @@
+﻿@using Microsoft.Extensions.Options;
+
+@{
+    ViewData["Title"] = "Cerrar sesión";
+}
+
+@inject IOptions<MyConfig> OptionsApplicationConfiguration
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    Se ha cerrado la sesión con éxito. 
+    <br />
+    <a href="@OptionsApplicationConfiguration.Value.URLHomeExternalApp">Volver a Iniciar Sesión</a>    
+</p>
